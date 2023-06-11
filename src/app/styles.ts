@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import * as Image from "src/assets";
+import * as Image from "../assets";
 
 export const Wrapper = styled.div`
   height: 100vh;

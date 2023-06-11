@@ -1,8 +1,8 @@
-import { GlobalStyles } from "src/theme/globalStyles";
+import { GlobalStyles } from "theme/globalStyles";
 import { ThemeProvider } from "styled-components";
 
-import { theme } from "src/theme";
-import { HomePage } from "src/components/HomePage";
+import { theme } from "theme";
+import { HomePage } from "components/HomePage";
 
 import * as Styles from "./styles";
 

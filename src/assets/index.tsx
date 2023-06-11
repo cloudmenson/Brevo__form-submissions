@@ -1,0 +1,12 @@
+export { default as css } from "../assets/img/css.png";
+export { default as desktopBackground } from "../assets/img/desktopBackground.png";
+export { default as frontEndDeveloper } from "../assets/img/front-end-developer.png";
+export { default as gift } from "../assets/img/gift.png";
+export { default as html } from "../assets/img/html.png";
+export { default as humanWithLaptop } from "../assets/img/human-with-laptop.png";
+export { default as js } from "../assets/img/js.png";
+export { default as sublimeText } from "../assets/img/sublime-text.png";
+export { ReactComponent as Calendar } from "../assets/svg/calendar.svg";
+export { ReactComponent as Globe } from "../assets/svg/globe.svg";
+export { ReactComponent as Logo } from "../assets/svg/logo.svg";
+export { ReactComponent as Time } from "../assets/svg/time.svg";

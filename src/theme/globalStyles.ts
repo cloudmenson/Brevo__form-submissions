@@ -1,12 +1,15 @@
-import { createGlobalStyle } from "styled-components";
+import { css, createGlobalStyle } from "styled-components";
 
-import { gilroyBold } from "src/fonts";
+import { gilroyRegular } from "fonts";
 
 export const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: gilroy_regular;
-    src: url(${gilroyBold}) format("woff2");
-  }
+  ${css`
+    @font-face {
+      font-family: gilroy_regular;
+      src: url(${gilroyRegular}) format("woff2");
+    }
+  `}
+  
 
   * {
     padding: 0;
