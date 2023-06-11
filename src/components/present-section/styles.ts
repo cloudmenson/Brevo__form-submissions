@@ -82,6 +82,7 @@ export const Span = styled.span`
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1px;
+    font-family: gilroy_bold;
   }
 `;
 

@@ -9,7 +9,6 @@ export const GlobalStyles = createGlobalStyle`
       src: url(${gilroyRegular}) format("woff2");
     }
   `}
-  
 
   * {
     padding: 0;

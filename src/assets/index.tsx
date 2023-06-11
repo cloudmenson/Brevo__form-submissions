@@ -1,5 +1,5 @@
 export { default as css } from "../assets/img/css.png";
-export { default as desktopBackground } from "../assets/img/desktopBackground.png";
+export { default as desktopBackground } from "../assets/img/desktop-background.png";
 export { default as frontEndDeveloper } from "../assets/img/front-end-developer.png";
 export { default as gift } from "../assets/img/gift.png";
 export { default as html } from "../assets/img/html.png";
