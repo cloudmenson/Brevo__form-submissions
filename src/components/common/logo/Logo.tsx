@@ -6,7 +6,7 @@ const Logo = () => {
     <Styles.LogoWrapper>
       <Styles.HiddenH1>Powercode Academy</Styles.HiddenH1>
 
-      <Image.Logo />
+      <Image.Logo alt="Logo" />
     </Styles.LogoWrapper>
   );
 };

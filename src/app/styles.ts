@@ -3,8 +3,8 @@ import styled, { css } from "styled-components";
 import * as Image from "assets";
 
 export const Wrapper = styled.div`
-  height: 100vh;
-  background-image: url(${Image.desktopBackground});
+  min-height: 100vh;
+  background-image: url(${Image.background});
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;

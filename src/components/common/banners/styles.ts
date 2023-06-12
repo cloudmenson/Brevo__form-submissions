@@ -40,7 +40,7 @@ export const Text = styled.p`
   font-size: 14px;
   line-height: 14px;
   font-weight: 600;
-  font-family: ${gilroySemibold};
+  font-family: gilroy_semibold;
 `;
 
 export const Icon = styled.span`
