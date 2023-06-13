@@ -11,6 +11,6 @@ export const Wrapper = styled.div`
 
   ${({ theme }) => css`
     color: ${theme.colors.white};
-    background-color: ${theme.colors.bgColor};
+    background-color: ${theme.colors.backgroundColor};
   `}
 `;

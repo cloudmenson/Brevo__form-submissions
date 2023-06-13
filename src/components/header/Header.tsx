@@ -1,5 +1,5 @@
 import { Logo } from "components/common/logo/Logo";
-import { Banner } from "components/common/banners/Banners";
+import { Banner } from "components/common/banner/Banner";
 
 import * as Image from "assets";
 import * as Styles from "./styles";

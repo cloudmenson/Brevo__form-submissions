@@ -2,13 +2,15 @@ import styled, { css } from "styled-components";
 
 import { gilroySemibold, gilroyBold, gilroyExtrabold } from "fonts";
 
-const styles600 = css`
+const fontWight600 = css`
   font-weight: 600;
   font-family: gilroy_semibold;
 `;
 
 export const Section = styled.section`
-  max-width: 427px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 
   ${css`
     @font-face {
@@ -28,7 +30,9 @@ export const Section = styled.section`
   `}
 `;
 
-export const Offer = styled.div``;
+export const Offer = styled.div`
+  max-width: 427px;
+`;
 
 export const StyleWebinar = styled.div`
   width: 120px;
@@ -60,7 +64,7 @@ export const StyleFromZero = styled.span`
 `;
 
 export const EasyStart = styled.h3`
-  ${styles600};
+  ${fontWight600};
 
   padding-left: 16px;
   font-size: 22px;
@@ -80,7 +84,7 @@ export const AboutWebinar = styled.div`
 `;
 
 export const Span = styled.span`
-  ${styles600};
+  ${fontWight600};
 `;
 
 export const SalarySpan = styled.div`
@@ -96,7 +100,7 @@ export const SalarySpan = styled.div`
 `;
 
 export const Salary = styled.span`
-  ${styles600};
+  ${fontWight600};
 
   margin-right: 8px;
 `;
