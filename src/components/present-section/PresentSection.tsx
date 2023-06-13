@@ -1,8 +1,10 @@
-import { Banner } from "components/common/banners/Banners";
+import { SignUp } from "components/sign-up/SignUp";
+import { Banner } from "components/common/banner/Banner";
 import { ExperienceInfo } from "components/common/experience-info/ExperienceInfo";
 
 import * as Image from "assets";
 import * as Styles from "./styles";
+
 
 const PresentSection = () => {
   return (
@@ -33,28 +35,28 @@ const PresentSection = () => {
             <Banner text="от 1 000$" bgcolor="caeruleum" />
           </Styles.SalarySpan>
         </Styles.AboutWebinar>
+
+        <Styles.ExperienceWrapper>
+          <ExperienceInfo
+            alt="Developer"
+            uppercase="true"
+            src={Image.developer}
+            title="Кирилл Касатанов"
+            text="6 лет коммерческого опыта с такими компаниями как Mercedes-benz и другими крупными корпорациями"
+          />
+
+          <ExperienceInfo
+            top={16}
+            alt="Gift"
+            width={210}
+            src={Image.gift}
+            title="Бонус за регистрацию"
+            text='PDF-файл "5 преимуществ профессии фронтенд разработчика"'
+          />
+        </Styles.ExperienceWrapper>
       </Styles.Offer>
 
-      <Styles.ExperienceWrapper>
-        <ExperienceInfo
-          alt="Developer"
-          uppercase="true"
-          src={Image.developer}
-          title="Кирилл Касатанов"
-          text="6 лет коммерческого опыта с такими компаниями как Mercedes-benz и другими крупными корпорациями"
-        />
-
-        <ExperienceInfo
-          top={16}
-          alt="Gift"
-          width={210}
-          src={Image.gift}
-          title="Бонус за регистрацию"
-          text='PDF-файл "5 преимуществ профессии фронтенд разработчика"'
-        />
-      </Styles.ExperienceWrapper>
-
-      {/* <Styles.SignUp></Styles.SignUp> */}
+      <SignUp />
     </Styles.Section>
   );
 };

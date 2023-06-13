@@ -20,7 +20,10 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 18px;
     font-weight: 400;
     font-family: gilroy_regular;
-    
+  }
+
+  input {
+    border: none
   }
 
   button {
