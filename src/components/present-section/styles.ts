@@ -35,6 +35,9 @@ export const Section = styled.section`
 export const Offer = styled.div`
   max-width: 427px;
 `;
+export const Offer = styled.div`
+  max-width: 427px;
+`;
 
 export const StyleWebinar = styled.div`
   width: 120px;
