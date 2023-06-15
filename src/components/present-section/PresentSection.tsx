@@ -5,7 +5,6 @@ import { ExperienceInfo } from "components/common/experience-info/ExperienceInfo
 import * as Image from "assets";
 import * as Styles from "./styles";
 
-
 const PresentSection = () => {
   return (
     <Styles.Section>
@@ -14,7 +13,7 @@ const PresentSection = () => {
           <Banner text="Вебинар" icon={<Image.Globe />} bgcolor="caeruleum" />
         </Styles.StyleWebinar>
 
-        <Styles.FrontEndText>Front-end</Styles.FrontEndText>
+        <Styles.TitleH2>Front-end</Styles.TitleH2>
 
         <Styles.IntroStyles>
           <Styles.StyleFromZero>
@@ -57,6 +56,13 @@ const PresentSection = () => {
       </Styles.Offer>
 
       <SignUp />
+
+      <Styles.FrontEndDeveloper src={Image.frontend} />
+      <Styles.Html src={Image.html} />
+      <Styles.Css src={Image.css} />
+      <Styles.Js src={Image.js} />
+      <Styles.SublimeText src={Image.sublime} />
+      <Styles.VsCode src={Image.vscode} />
     </Styles.Section>
   );
 };
