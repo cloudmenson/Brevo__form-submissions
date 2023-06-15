@@ -21,9 +21,13 @@ const SignUp = () => {
 
     try {
       await sendEmail({ name, phoneNumber, email });
-      console.log("Email sent successfully");
+      alert("Успешно отправлено");
+      setName("");
+      setPhoneNumber("");
+      setEmail("");
     } catch (error) {
-      console.error("Error sending email:", error);
+      alert("Ошибка при отправке. Пожалуйста, попробуйте еще раз");
+      console.log(error);
     }
   };
 

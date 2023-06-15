@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-import * as Image from "assets";
 import { gilroySemibold, gilroyBold, gilroyExtrabold } from "fonts";
 
 const fontWeight600 = css`
@@ -32,9 +31,6 @@ export const Section = styled.section`
   `}
 `;
 
-export const Offer = styled.div`
-  max-width: 427px;
-`;
 export const Offer = styled.div`
   max-width: 427px;
 `;
