@@ -1,7 +1,7 @@
 ## Available Scripts
 
-`!!! To send the form, you need the config folder, which contains the keys.ts file, within which the API key must be placed in the src folder.
-The folder is in private.`
+`!!! To send the form, the .env file that contains the secret API key must be placed in the src folder.
+This file is private.`
 
 In the terminal or console, type `npm install --force` to install node modules folder.
 
