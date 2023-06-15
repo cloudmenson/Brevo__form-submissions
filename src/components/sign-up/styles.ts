@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleH2 = styled.h2`
-  margin-bottom: 20px;
+  margin-bottom: 6px;
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
@@ -25,22 +25,19 @@ export const ColorSpan = styled.span`
 `;
 
 export const Form = styled.form`
-  :not(:first-of-type) {
-    position: relative;
-    margin-top: 14px;
-  }
+  position: relative;
 `;
 
-export const WrapperForPhoneInput = styled.div``;
-
 export const StyledPhoneInput = styled(PhoneInput)`
+  margin-top: 14px;
+
   .PhoneInputCountrySelectArrow {
     display: none;
   }
 
   div {
     position: absolute;
-    top: 36%;
+    top: 31%;
     left: 82%;
   }
 
@@ -66,6 +63,13 @@ export const StyledPhoneInput = styled(PhoneInput)`
       }
     `};
   }
+`;
+
+export const FormikError = styled.span`
+  position: absolute;
+  left: 5px;
+  font-size: 10px;
+  color: ${({ theme }) => theme.colors.rubeus};
 `;
 
 export const PrivacyPolicy = styled.div`

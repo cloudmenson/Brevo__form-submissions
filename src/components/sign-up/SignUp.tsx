@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 import { sendEmail } from "service/emailService";
 import { Input } from "components/common/input/Input";
@@ -8,28 +10,33 @@ import * as Styles from "./styles";
 import "react-phone-number-input/style.css";
 
 const SignUp = () => {
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [email, setEmail] = useState("");
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .required("Введите имя и фамилию")
+      .min(8, "Минимум 8 символов"),
+    email: Yup.string()
+      .required("Введите email")
+      .email("Некорректный формат email"),
+    phoneNumber: Yup.string().required("Введите номер телефона"),
+  });
 
-  const handlePhoneChange = (value: string) => {
-    setPhoneNumber(value);
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    try {
-      await sendEmail({ name, phoneNumber, email });
-      alert("Успешно отправлено");
-      setName("");
-      setPhoneNumber("");
-      setEmail("");
-    } catch (error) {
-      alert("Ошибка при отправке. Пожалуйста, попробуйте еще раз");
-      console.log(error);
-    }
-  };
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      phoneNumber: "",
+      email: "",
+    },
+    validationSchema,
+    onSubmit: async (values) => {
+      try {
+        await sendEmail(values);
+        alert("Успешно отправлено");
+        formik.resetForm();
+      } catch (error) {
+        alert("Ошибка при отправке. Пожалуйста, попробуйте еще раз");
+      }
+    },
+  });
 
   return (
     <Styles.Wrapper>
@@ -38,40 +45,49 @@ const SignUp = () => {
         <Styles.ColorSpan>бесплатно</Styles.ColorSpan>&nbsp; и получите подарок
       </Styles.TitleH2>
 
-      <Styles.Form onSubmit={handleSubmit}>
+      <Styles.Form onSubmit={formik.handleSubmit}>
         <Input
           type="text"
           name="name"
-          value={name}
+          value={formik.values.name}
+          onChange={formik.handleChange}
           placeholder="Ваше имя и фамилия"
-          onChange={({ target }) => setName(target.value)}
         />
+        {formik.touched.name && formik.errors.name ? (
+          <Styles.FormikError>{formik.errors.name}</Styles.FormikError>
+        ) : null}
 
         <Styles.StyledPhoneInput
           type="tel"
-          name="phone"
           international
-          value={phoneNumber}
+          name="phoneNumber"
           defaultCountry="UA"
-          onChange={handlePhoneChange}
           placeholder="Ваш номер телефона"
+          value={formik.values.phoneNumber}
           countryCallingCodeEditable={false}
+          onChange={(value) => formik.setFieldValue("phoneNumber", value)}
         />
+        {formik.touched.phoneNumber && formik.errors.phoneNumber ? (
+          <Styles.FormikError>{formik.errors.phoneNumber}</Styles.FormikError>
+        ) : null}
 
         <Input
           type="email"
           name="email"
-          value={email}
-          placeholder="Ваше email"
-          onChange={({ target }) => setEmail(target.value)}
+          placeholder="Ваш email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
         />
+        {formik.touched.email && formik.errors.email ? (
+          <Styles.FormikError>{formik.errors.email}</Styles.FormikError>
+        ) : null}
 
         <Button text="Записаться бесплатно" type="submit" />
 
         <Styles.PrivacyPolicy>
           Нажимая на кнопку я соглашаюсь
           <Styles.PrivacyLink target="_blank" href="#">
-            c политикой конфедициальности
+            c политикой конфиденциальности
           </Styles.PrivacyLink>
         </Styles.PrivacyPolicy>
       </Styles.Form>

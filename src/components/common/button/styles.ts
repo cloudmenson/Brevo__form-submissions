@@ -2,10 +2,12 @@ import styled, { css } from "styled-components";
 
 import { gilroyBold } from "fonts";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  margin-top: 18px;
+`;
 
 export const Button = styled.button`
-  padding: 13px 40px;
+  padding: 13px 43px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 700;

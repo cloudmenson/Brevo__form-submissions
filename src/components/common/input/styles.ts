@@ -2,7 +2,9 @@ import styled, { css } from "styled-components";
 
 import { gilroyRegular } from "fonts";
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  margin-top: 14px;
+`;
 
 export const Input = styled.input`
   width: 204px;

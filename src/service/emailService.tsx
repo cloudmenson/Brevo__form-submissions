@@ -1,7 +1,5 @@
 import axios from "axios";
 
-import { API_KEY } from "config/keys";
-
 import { ISendEmail } from "./types";
 
 const sendEmail = async ({ name, email, phoneNumber }: ISendEmail) => {
@@ -10,19 +8,17 @@ const sendEmail = async ({ name, email, phoneNumber }: ISendEmail) => {
       "https://api.sendinblue.com/v3/smtp/email",
       {
         sender: { name: `${name}`, email: "hrytsenko.danylo@gmail.com" },
-        to: [{ email: "cloudmenson9@gmail.com" }],
+        to: [{ email: "designer.web.studio.rgb@gmail.com" }],
         subject: "New Contact Form Submission",
         textContent: ` Email: ${email}\nPhone Number: ${phoneNumber}`,
       },
       {
         headers: {
-          "api-key": API_KEY,
+          "api-key": process.env.REACT_APP_API_KEY,
           "Content-Type": "application/json",
         },
       }
     );
-
-    console.log("Email sent:", response.data);
   } catch (error) {
     console.error("Error sending email:", error);
   }
