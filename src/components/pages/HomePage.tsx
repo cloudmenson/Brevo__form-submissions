@@ -1,5 +1,4 @@
-import { Header } from "./header/Header";
-import { PresentSection } from "./present-section/PresentSection";
+import { Header, PresentSection } from "components";
 
 import * as Styles from "./styles";
 

@@ -1,6 +1,5 @@
-import { SignUp } from "components/sign-up/SignUp";
-import { Banner } from "components/common/banner/Banner";
-import { ExperienceInfo } from "components/common/experience-info/ExperienceInfo";
+import { SignUp, Banner, ExperienceInfo } from "components";
+import { getTranslatedText } from "components/local/getTranslatedText";
 
 import * as Image from "assets";
 import * as Styles from "./styles";
@@ -10,47 +9,63 @@ const PresentSection = () => {
     <Styles.Section>
       <Styles.Offer>
         <Styles.StyleWebinar>
-          <Banner text="Вебинар" icon={<Image.Globe />} bgcolor="caeruleum" />
+          <Banner
+            bgcolor="caeruleum"
+            icon={<Image.Globe />}
+            text={getTranslatedText("presentSection.webinar")}
+          />
         </Styles.StyleWebinar>
 
-        <Styles.TitleH2>Front-end</Styles.TitleH2>
+        <Styles.TitleH2>
+          {getTranslatedText("presentSection.frontEndTitle")}
+        </Styles.TitleH2>
 
         <Styles.IntroStyles>
           <Styles.StyleFromZero>
-            <Banner text="С нуля" bgcolor="rubeus" />
+            <Banner
+              bgcolor="rubeus"
+              text={getTranslatedText("presentSection.fromZero")}
+            />
           </Styles.StyleFromZero>
 
-          <Styles.EasyStart>легкий старт в IT профессии</Styles.EasyStart>
+          <Styles.EasyStart>
+            {getTranslatedText("presentSection.startIT")}
+          </Styles.EasyStart>
         </Styles.IntroStyles>
 
         <Styles.AboutWebinar>
-          Узнайте какими&nbsp;
+          {getTranslatedText("presentSection.learnHow")}&nbsp;
           <Styles.Span>
-            навычками должен обладать фронтенд разработчик в 2023 году&nbsp;
+            {getTranslatedText("presentSection.whatSkills")}&nbsp;
           </Styles.Span>
-          и как начать карьеру в востребованной профессии
+          {getTranslatedText("presentSection.howToStartCareer")}
           <Styles.SalarySpan>
-            <Styles.Salary>с зарплатой</Styles.Salary>
-            <Banner text="от 1 000$" bgcolor="caeruleum" />
+            <Styles.Salary>
+              {getTranslatedText("presentSection.withSalary")}
+            </Styles.Salary>
+            <Banner
+              bgcolor="caeruleum"
+              text={getTranslatedText("presentSection.potentialSalary")}
+            />
           </Styles.SalarySpan>
         </Styles.AboutWebinar>
 
         <Styles.ExperienceWrapper>
           <ExperienceInfo
-            alt="Developer"
             uppercase="true"
             src={Image.developer}
-            title="Кирилл Касатанов"
-            text="6 лет коммерческого опыта с такими компаниями как Mercedes-benz и другими крупными корпорациями"
+            alt={getTranslatedText("experienceInfo.developerAlt")}
+            text={getTranslatedText("experienceInfo.developerText")}
+            title={getTranslatedText("experienceInfo.developerTitle")}
           />
 
           <ExperienceInfo
             top={16}
-            alt="Gift"
             width={210}
             src={Image.gift}
-            title="Бонус за регистрацию"
-            text='PDF-файл "5 преимуществ профессии фронтенд разработчика"'
+            alt={getTranslatedText("experienceInfo.giftAlt")}
+            text={getTranslatedText("experienceInfo.giftText")}
+            title={getTranslatedText("experienceInfo.giftTitle")}
           />
         </Styles.ExperienceWrapper>
       </Styles.Offer>

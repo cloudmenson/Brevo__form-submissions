@@ -1,5 +1,6 @@
-import { Logo } from "components/common/logo/Logo";
-import { Banner } from "components/common/banner/Banner";
+import { Logo, Banner } from "components";
+// import { Logo } from "components/logo/Logo";
+import { getTranslatedText } from "components/local/getTranslatedText";
 
 import * as Image from "assets";
 import * as Styles from "./styles";
@@ -10,8 +11,11 @@ const Header = () => {
       <Logo />
 
       <Styles.TimesWrapper>
-        <Banner text="29 декабря" icon={<Image.Calendar />} />
-        <Banner text="3,5 часа" icon={<Image.Time />} />
+        <Banner
+          icon={<Image.Calendar />}
+          text={getTranslatedText("header.month")}
+        />
+        <Banner text={getTranslatedText("header.time")} icon={<Image.Time />} />
       </Styles.TimesWrapper>
     </Styles.Wrapper>
   );

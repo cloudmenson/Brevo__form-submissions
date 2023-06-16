@@ -2,7 +2,7 @@ import { GlobalStyles } from "theme/globalStyles";
 import { ThemeProvider } from "styled-components";
 
 import { theme } from "theme";
-import { HomePage } from "components/HomePage";
+import { HomePage } from "components/pages/HomePage";
 
 import * as Styles from "./styles";
 

@@ -14,10 +14,12 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleH2 = styled.h2`
+  width: 245px;
   margin-bottom: 6px;
   font-weight: 700;
   font-size: 22px;
   line-height: 26px;
+  word-break: break-word;
 `;
 
 export const ColorSpan = styled.span`
