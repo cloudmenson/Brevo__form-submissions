@@ -1,7 +1,7 @@
-## Available Scripts
-
 `!!! To send the form, the .env file that contains the secret API key must be placed in the src folder.
 This file is private.`
+
+## Setup
 
 In the terminal or console, type `npm install --force` to install node modules folder.
 
