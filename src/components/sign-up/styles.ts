@@ -39,7 +39,7 @@ export const StyledPhoneInput = styled(PhoneInput)`
 
   div {
     position: absolute;
-    top: 31%;
+    top: 30%;
     left: 82%;
   }
 

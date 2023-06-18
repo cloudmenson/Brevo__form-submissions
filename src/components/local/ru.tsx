@@ -45,6 +45,10 @@ const ru = {
     minEightSymbols: "Минимум 8 символов",
     requiredEmail: "Введите email",
     requiredPhoneNumber: "Введите номер телефона",
+    invalidEmailFormat: "Неверный формат почты",
+    max129: "Максимум 129 символов",
+    noSpace: "Не должно быть пробелов",
+    invalidPhoneNumberFormat: "Неверный формат номера",
   },
 };
 

@@ -1,25 +1,24 @@
-// import React from "react";
-import * as Yup from "yup";
 import { useFormik } from "formik";
 
-import { sendEmail } from "service/emailService";
 import { Input, Button } from "components";
+import { sendEmail } from "service/emailService";
+import { validationSchema } from "components/sign-up/config";
 import { getTranslatedText } from "components/local/getTranslatedText";
+import { ISignUp } from "./types";
 
 import * as Styles from "./styles";
 import "react-phone-number-input/style.css";
 
 const SignUp = () => {
-  const validationSchema = Yup.object({
-    name: Yup.string()
-      .required(getTranslatedText("errors.requiredName"))
-      .min(8, getTranslatedText("errors.minEightSymbols")),
-    email: Yup.string().required(getTranslatedText("errors.requiredEmail")),
-    // .email("Некорректный формат email"),
-    phoneNumber: Yup.string().required(
-      getTranslatedText("errors.requiredPhoneNumber")
-    ),
-  });
+  const handleSubmit = async (values: ISignUp) => {
+    try {
+      await sendEmail(values);
+      alert(getTranslatedText("signUp.successAlert"));
+      formik.resetForm();
+    } catch (error) {
+      alert(getTranslatedText("signUp.poorAlert"));
+    }
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -28,15 +27,7 @@ const SignUp = () => {
       email: "",
     },
     validationSchema,
-    onSubmit: async (values) => {
-      try {
-        await sendEmail(values);
-        alert(getTranslatedText("signUp.successAlert"));
-        formik.resetForm();
-      } catch (error) {
-        alert(getTranslatedText("signUp.poorAlert"));
-      }
-    },
+    onSubmit: handleSubmit,
   });
 
   return (
@@ -60,7 +51,7 @@ const SignUp = () => {
         ) : null}
 
         <Styles.StyledPhoneInput
-          type="tel"
+          type="text"
           international
           name="phoneNumber"
           defaultCountry="UA"
@@ -74,7 +65,7 @@ const SignUp = () => {
         ) : null}
 
         <Input
-          type="email"
+          type="text"
           name="email"
           value={formik.values.email}
           onChange={formik.handleChange}
