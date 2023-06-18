@@ -1,4 +1,4 @@
-export { default as background } from "../assets/img/background.png";
+export { default as backgroundPC } from "../assets/img/background.png";
 export { default as css } from "../assets/img/css.png";
 export { default as developer } from "../assets/img/developer.png";
 export { default as frontend } from "../assets/img/frontend.png";

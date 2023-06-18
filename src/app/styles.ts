@@ -4,7 +4,8 @@ import * as Image from "assets";
 
 export const Wrapper = styled.div`
   min-height: 100vh;
-  background-image: url(${Image.background});
+  background-image: url(${Image.backgroundPC});
+  
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;

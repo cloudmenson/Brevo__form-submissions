@@ -17,22 +17,22 @@ export const Wrapper = styled.div<{ bgcolor?: string }>`
   `}
 
   ${({ theme, bgcolor }) => css`
-    background-color: ${bgcolor === "purpureus"
-      ? theme.colors.purpureus
-      : bgcolor === "caeruleum"
-      ? theme.colors.caeruleum
-      : bgcolor === "rubeus"
-      ? theme.colors.rubeus
+    background-color: ${bgcolor === "purple"
+      ? theme.colors.purple
+      : bgcolor === "whiteBlue"
+      ? theme.colors.whiteBlue
+      : bgcolor === "red"
+      ? theme.colors.red
       : null};
 
-    padding: ${bgcolor === "purpureus"
+    padding: ${bgcolor === "purple"
       ? "12px 24px"
-      : bgcolor === "caeruleum"
+      : bgcolor === "whiteBlue"
       ? "10px 12px"
-      : bgcolor === "rubeus"
+      : bgcolor === "red"
       ? "6px 12px"
       : ""};
-    border-radius: ${bgcolor === "purpureus" ? "10px" : "5px"};
+    border-radius: ${bgcolor === "purple" ? "10px" : "5px"};
   `}
 `;
 

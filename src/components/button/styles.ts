@@ -21,6 +21,6 @@ export const Button = styled.button`
 
     font-family: gilroy_bold;
     color: ${theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.rubeus};
+    background-color: ${({ theme }) => theme.colors.red};
   `};
 `;

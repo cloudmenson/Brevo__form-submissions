@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   height: 374px;
   border-radius: 10px;
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.obscurus};
+  background-color: ${({ theme }) => theme.colors.whitePurple};
 `;
 
 export const TitleH2 = styled.h2`
@@ -23,7 +23,7 @@ export const TitleH2 = styled.h2`
 `;
 
 export const ColorSpan = styled.span`
-  color: ${({ theme }) => theme.colors.rubeus};
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 export const Form = styled.form`
@@ -71,7 +71,7 @@ export const FormikError = styled.span`
   position: absolute;
   left: 5px;
   font-size: 10px;
-  color: ${({ theme }) => theme.colors.rubeus};
+  color: ${({ theme }) => theme.colors.red};
 `;
 
 export const PrivacyPolicy = styled.div`

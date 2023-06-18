@@ -47,7 +47,7 @@ export const TitleH2 = styled.h2`
 
   ${({ theme }) => css`
     font-family: gilroy_extrabold;
-    color: ${theme.colors.rubeus};
+    color: ${theme.colors.red};
   `}
 `;
 
