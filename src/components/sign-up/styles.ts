@@ -115,6 +115,9 @@ export const FormikError = styled.span`
 
 export const PrivacyPolicy = styled.div`
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;

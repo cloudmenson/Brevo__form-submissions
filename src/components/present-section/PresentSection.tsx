@@ -71,16 +71,21 @@ const PresentSection = () => {
               src={Image.developer}
               alt={getTranslatedText("experienceInfo.developerAlt")}
               text={getTranslatedText("experienceInfo.developerText")}
-              title={getTranslatedText("experienceInfo.developerTitle")}
-            />
+            >
+              {getTranslatedText("experienceInfo.developerName")}
+              <Styles.StyledWord>
+                {getTranslatedText("experienceInfo.developerSurname")}
+              </Styles.StyledWord>
+            </ExperienceInfo>
 
             <ExperienceInfo
               top={16}
               src={Image.gift}
               alt={getTranslatedText("experienceInfo.giftAlt")}
-              text={getTranslatedText("experienceInfo.giftText")}
-              title={getTranslatedText("experienceInfo.giftTitle")}
-            />
+              text={getTranslatedText("experienceInfo.giftTextDeveloper")}
+            >
+              {getTranslatedText("experienceInfo.giftTitle")}
+            </ExperienceInfo>
           </Styles.ExperienceWrapper>
         </Responsive.NotMobile>
 
@@ -89,9 +94,10 @@ const PresentSection = () => {
             <ExperienceInfo
               src={Image.gift}
               alt={getTranslatedText("experienceInfo.giftAlt")}
-              text={getTranslatedText("experienceInfo.giftText")}
-              title={getTranslatedText("experienceInfo.giftTitle")}
-            />
+              text={getTranslatedText("experienceInfo.giftTextDesigner")}
+            >
+              {getTranslatedText("experienceInfo.giftTitle")}
+            </ExperienceInfo>
 
             <ExperienceInfo
               top={22}
@@ -99,8 +105,12 @@ const PresentSection = () => {
               src={Image.developer}
               alt={getTranslatedText("experienceInfo.developerAlt")}
               text={getTranslatedText("experienceInfo.developerText")}
-              title={getTranslatedText("experienceInfo.developerTitle")}
-            />
+            >
+              {getTranslatedText("experienceInfo.developerName")}
+              <Styles.StyledWord>
+                {getTranslatedText("experienceInfo.developerSurname")}
+              </Styles.StyledWord>
+            </ExperienceInfo>
           </Styles.ExperienceWrapper>
         </Responsive.Mobile>
       </Styles.Offer>

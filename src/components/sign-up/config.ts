@@ -6,7 +6,7 @@ import {
   EMAIL_REG_EXP,
   NUMBER_REG_EXP,
   NUMBER_OF_CHARACTERS,
-} from "validation/regExp";
+} from "utils/regExp";
 
 export const validationSchema = Yup.object({
   name: Yup.string()

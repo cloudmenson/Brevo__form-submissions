@@ -31,9 +31,11 @@ export const Section = styled.section<IWindowWidth>`
       src: url(${gilroyExtrabold}) format("woff2");
     }
 
-    ${windowWidth < 767 && theme.responsive.isMobile && css`
-      align-items: center;
+    ${windowWidth < 767 &&
+    theme.responsive.isMobile &&
+    css`
       justify-content: center;
+      align-items: center;
     `}
 
     ${theme.responsive.isMobile &&
@@ -194,6 +196,10 @@ export const ExperienceWrapper = styled.div`
       align-items: center;
       text-align: left;
     `}
+`;
+
+export const StyledWord = styled.span`
+  color: ${({ theme }) => theme.colors.whiteBlue};
 `;
 
 export const FrontEndDeveloper = styled.img`

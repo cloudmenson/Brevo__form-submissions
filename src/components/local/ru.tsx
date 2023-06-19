@@ -20,13 +20,16 @@ const ru = {
     withPotentialSalary: "с зарплатой от 1000$",
   },
   experienceInfo: {
-    developerTitle: "Кирилл Касатанов",
+    developerName: "Кирилл ",
+    developerSurname: "Касатанов",
     developerAlt: "Разработчик",
     developerText:
       "6 лет коммерческого опыта с такими компаниями как Mercedes-benz и другими крупными корпорациями",
     giftTitle: "Бонус за регистрацию",
     giftAlt: "Подарок",
-    giftText: 'PDF-файл "5 преимуществ профессии фронтенд разработчика"',
+    giftTextDeveloper:
+      'PDF-файл "5 преимуществ профессии фронтенд разработчика"',
+    giftTextDesigner: 'PDF-файл "5 преимуществ профессии веб-дизайнера"',
   },
 
   signUp: {

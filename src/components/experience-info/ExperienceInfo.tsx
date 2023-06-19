@@ -6,7 +6,7 @@ const ExperienceInfo = ({
   alt,
   src,
   text,
-  title,
+  children,
   uppercase,
 }: IExperienceInfo) => {
   return (
@@ -16,7 +16,7 @@ const ExperienceInfo = ({
       </Styles.ImgWrapper>
 
       <Styles.TextWrapper>
-        <Styles.Title uppercase={uppercase}>{title}</Styles.Title>
+        <Styles.Title uppercase={uppercase}>{children}</Styles.Title>
         <Styles.Text>{text}</Styles.Text>
       </Styles.TextWrapper>
     </Styles.Wrapper>
