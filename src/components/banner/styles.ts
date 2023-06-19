@@ -9,14 +9,12 @@ export const Wrapper = styled.div<{ bgcolor?: string }>`
   align-items: center;
   gap: 7px;
 
-  ${css`
+  ${({ theme, bgcolor }) => css`
     @font-face {
       font-family: gilroy_semibold;
       src: url(${gilroySemibold}) format("woff2");
     }
-  `}
 
-  ${({ theme, bgcolor }) => css`
     background-color: ${bgcolor === "purple"
       ? theme.colors.purple
       : bgcolor === "whiteBlue"
@@ -28,11 +26,33 @@ export const Wrapper = styled.div<{ bgcolor?: string }>`
     padding: ${bgcolor === "purple"
       ? "12px 24px"
       : bgcolor === "whiteBlue"
-      ? "10px 12px"
+      ? "7px 19px"
       : bgcolor === "red"
       ? "6px 12px"
       : ""};
     border-radius: ${bgcolor === "purple" ? "10px" : "5px"};
+
+    ${theme.responsive.isMobile &&
+    css`
+      padding: ${bgcolor === "purple"
+        ? "4px 9px"
+        : bgcolor === "whiteBlue"
+        ? "4px 14px"
+        : bgcolor === "red"
+        ? "2px 9px"
+        : ""};
+      border-radius: ${bgcolor === "purple" ? "6px" : "3px"};
+
+      p {
+        font-size: ${bgcolor === "purple"
+          ? "11px"
+          : bgcolor === "whiteBlue"
+          ? "12px"
+          : bgcolor === "red"
+          ? "16px"
+          : ""};
+      }
+    `}
   `}
 `;
 
@@ -44,6 +64,17 @@ export const Text = styled.p`
 `;
 
 export const Icon = styled.span`
-  width: 15px;
-  height: 15px;
+  svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  ${({ theme }) =>
+    theme.responsive.isMobile &&
+    css`
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    `}
 `;

@@ -4,6 +4,12 @@ import { gilroyBold } from "fonts";
 
 export const Wrapper = styled.div`
   margin-top: 18px;
+
+  ${({ theme }) =>
+    theme.responsive.isMobile &&
+    css`
+      margin-top: 14px;
+    `};
 `;
 
 export const Button = styled.button`
@@ -22,5 +28,13 @@ export const Button = styled.button`
     font-family: gilroy_bold;
     color: ${theme.colors.white};
     background-color: ${({ theme }) => theme.colors.red};
+
+    ${theme.responsive.isMobile &&
+    css`
+      padding: 10px 32px;
+      font-size: 14px;
+      line-height: 22px;
+      background-color: ${theme.colors.blue};
+    `}
   `};
 `;

@@ -1,7 +1,7 @@
 import * as Styles from "./styles";
 import { IBanners } from "./types";
 
-const Banner = ({ text, icon, bgcolor = "purpureus" }: IBanners) => {
+const Banner = ({ text, icon, bgcolor}: IBanners) => {
   return (
     <Styles.Wrapper bgcolor={bgcolor}>
       {icon && <Styles.Icon>{icon}</Styles.Icon>}

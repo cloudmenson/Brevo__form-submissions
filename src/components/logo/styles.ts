@@ -1,9 +1,16 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
   width: 182px;
+
+  ${({ theme }) => css`
+    ${theme.responsive.isMobile &&
+    css`
+      width: 100px;
+    `}
+  `}
 `;
 
 export const HiddenH1 = styled.h1`

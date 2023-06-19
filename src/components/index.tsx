@@ -6,3 +6,4 @@ export { Input } from "./input/Input";
 export { Logo } from "./logo/Logo";
 export { PresentSection } from "./present-section/PresentSection";
 export { SignUp } from "./sign-up/SignUp";
+export * as Responsive from "./responsive";

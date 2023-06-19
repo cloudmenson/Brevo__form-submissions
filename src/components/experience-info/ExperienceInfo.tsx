@@ -7,7 +7,6 @@ const ExperienceInfo = ({
   src,
   text,
   title,
-  width,
   uppercase,
 }: IExperienceInfo) => {
   return (
@@ -18,7 +17,7 @@ const ExperienceInfo = ({
 
       <Styles.TextWrapper>
         <Styles.Title uppercase={uppercase}>{title}</Styles.Title>
-        <Styles.Text width={width}>{text}</Styles.Text>
+        <Styles.Text>{text}</Styles.Text>
       </Styles.TextWrapper>
     </Styles.Wrapper>
   );

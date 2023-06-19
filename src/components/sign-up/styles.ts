@@ -2,15 +2,31 @@ import styled, { css } from "styled-components";
 import PhoneInput from "react-phone-number-input";
 
 export const Wrapper = styled.div`
+  margin-left: 135px;
   padding: 50px 58px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
-  height: 374px;
   border-radius: 10px;
   text-align: center;
-  background-color: ${({ theme }) => theme.colors.whitePurple};
+
+  ${({ theme }) => css`
+    background-color: ${({ theme }) => theme.colors.whitePurple};
+
+    ${theme.responsive.isTablet &&
+    css`
+      margin-left: 0;
+      padding: 40px 40px 5px;
+      width: 250px;
+    `}
+
+    ${theme.responsive.isMobile &&
+    css`
+      margin-left: 0;
+      padding: 45px 18px;
+      text-align: center;
+    `}
+  `}
 `;
 
 export const TitleH2 = styled.h2`
@@ -20,6 +36,14 @@ export const TitleH2 = styled.h2`
   font-size: 22px;
   line-height: 26px;
   word-break: break-word;
+
+  ${({ theme }) =>
+    theme.responsive.isMobile &&
+    css`
+      width: 223px;
+      font-size: 20px;
+      line-height: 23px;
+    `}
 `;
 
 export const ColorSpan = styled.span`
@@ -41,6 +65,13 @@ export const StyledPhoneInput = styled(PhoneInput)`
     position: absolute;
     top: 30%;
     left: 82%;
+
+    ${({ theme }) =>
+      theme.responsive.isMobile &&
+      css`
+        top: 30%;
+        left: 86%;
+      `}
   }
 
   select {
@@ -63,6 +94,14 @@ export const StyledPhoneInput = styled(PhoneInput)`
       &::placeholder {
         color: ${theme.colors.grey};
       }
+
+      ${theme.responsive.isMobile &&
+      css`
+        padding: 11px 26px;
+        width: 242px;
+        font-size: 12px;
+        line-height: 22px;
+      `}
     `};
   }
 `;
@@ -79,11 +118,24 @@ export const PrivacyPolicy = styled.div`
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
-  color: ${({ theme }) => theme.colors.greyTransparent};
+
+  ${({ theme }) => css`
+    color: ${theme.colors.greyTransparent};
+
+    ${theme.responsive.isMobile &&
+    css`
+      margin-top: 18px;
+      font-size: 11px;
+      line-height: 16px;
+    `}
+  `}
 `;
 
 export const PrivacyLink = styled.a`
   display: inline-block;
-  color: ${({ theme }) => theme.colors.greyTransparent};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.greyTransparent};
+
+  ${({ theme }) => css`
+    color: ${theme.colors.greyTransparent};
+    border-bottom: 1px solid ${theme.colors.greyTransparent};
+  `}
 `;

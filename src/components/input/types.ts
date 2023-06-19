@@ -5,3 +5,7 @@ export interface IInput {
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
+
+export interface IWindowWidth {
+  windowWidth: number;
+}

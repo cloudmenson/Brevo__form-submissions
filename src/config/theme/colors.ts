@@ -11,9 +11,9 @@ const grey = "#D7D7D7";
 const greyTransparent = "rgba(255, 255, 255, 0.5)";
 const inputBackground = "#272d3d";
 const whitePurple = "#303A53";
-
-//purpure
 const backgroundColor = "hsla(229, 18%, 18%, 1)";
+
+//purple
 const backgroundGradient =
   "linear-gradient(0deg, hsla(244, 35%, 28%, 1) 0%, hsla(229, 18%, 18%, 1) 50%)";
 //red

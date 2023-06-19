@@ -1,83 +1,122 @@
-import { SignUp, Banner, ExperienceInfo } from "components";
+import { useWindowWidth } from "hooks/useWindowWidth";
 import { getTranslatedText } from "components/local/getTranslatedText";
+import { SignUp, Banner, ExperienceInfo, Responsive } from "components";
 
 import * as Image from "assets";
 import * as Styles from "./styles";
 
 const PresentSection = () => {
+  const size = useWindowWidth();
+
   return (
-    <Styles.Section>
+    <Styles.Section windowWidth={size}>
       <Styles.Offer>
         <Styles.StyleWebinar>
           <Banner
-            bgcolor="caeruleum"
+            bgcolor="whiteBlue"
             icon={<Image.Globe />}
             text={getTranslatedText("presentSection.webinar")}
           />
         </Styles.StyleWebinar>
 
-        <Styles.TitleH2>
+        <Styles.TitleH2 windowWidth={size}>
           {getTranslatedText("presentSection.frontEndTitle")}
         </Styles.TitleH2>
 
         <Styles.IntroStyles>
           <Styles.StyleFromZero>
             <Banner
-              bgcolor="rubeus"
+              bgcolor="red"
               text={getTranslatedText("presentSection.fromZero")}
             />
           </Styles.StyleFromZero>
 
-          <Styles.EasyStart>
+          <Styles.EasyStart windowWidth={size}>
             {getTranslatedText("presentSection.startIT")}
           </Styles.EasyStart>
         </Styles.IntroStyles>
 
-        <Styles.AboutWebinar>
+        <Styles.AboutWebinar windowWidth={size}>
           {getTranslatedText("presentSection.learnHow")}&nbsp;
           <Styles.Span>
             {getTranslatedText("presentSection.whatSkills")}&nbsp;
           </Styles.Span>
           {getTranslatedText("presentSection.howToStartCareer")}
-          <Styles.SalarySpan>
-            <Styles.Salary>
-              {getTranslatedText("presentSection.withSalary")}
-            </Styles.Salary>
-            <Banner
-              bgcolor="caeruleum"
-              text={getTranslatedText("presentSection.potentialSalary")}
-            />
-          </Styles.SalarySpan>
+          <Responsive.NotMobile>
+            <Styles.SalarySpan>
+              <Styles.Salary>
+                {getTranslatedText("presentSection.withSalary")}
+              </Styles.Salary>
+              <Banner
+                bgcolor="whiteBlue"
+                text={getTranslatedText("presentSection.potentialSalary")}
+              />
+            </Styles.SalarySpan>
+          </Responsive.NotMobile>
+          <Responsive.Mobile>
+            <Styles.WithPotentialSalary>
+              {getTranslatedText("presentSection.withPotentialSalary")}
+            </Styles.WithPotentialSalary>
+          </Responsive.Mobile>
         </Styles.AboutWebinar>
 
-        <Styles.ExperienceWrapper>
-          <ExperienceInfo
-            uppercase="true"
-            src={Image.developer}
-            alt={getTranslatedText("experienceInfo.developerAlt")}
-            text={getTranslatedText("experienceInfo.developerText")}
-            title={getTranslatedText("experienceInfo.developerTitle")}
-          />
+        <Responsive.Mobile>
+          <SignUp />
+        </Responsive.Mobile>
 
-          <ExperienceInfo
-            top={16}
-            width={210}
-            src={Image.gift}
-            alt={getTranslatedText("experienceInfo.giftAlt")}
-            text={getTranslatedText("experienceInfo.giftText")}
-            title={getTranslatedText("experienceInfo.giftTitle")}
-          />
-        </Styles.ExperienceWrapper>
+        <Responsive.NotMobile>
+          <Styles.ExperienceWrapper>
+            <ExperienceInfo
+              uppercase="true"
+              src={Image.developer}
+              alt={getTranslatedText("experienceInfo.developerAlt")}
+              text={getTranslatedText("experienceInfo.developerText")}
+              title={getTranslatedText("experienceInfo.developerTitle")}
+            />
+
+            <ExperienceInfo
+              top={16}
+              src={Image.gift}
+              alt={getTranslatedText("experienceInfo.giftAlt")}
+              text={getTranslatedText("experienceInfo.giftText")}
+              title={getTranslatedText("experienceInfo.giftTitle")}
+            />
+          </Styles.ExperienceWrapper>
+        </Responsive.NotMobile>
+
+        <Responsive.Mobile>
+          <Styles.ExperienceWrapper>
+            <ExperienceInfo
+              src={Image.gift}
+              alt={getTranslatedText("experienceInfo.giftAlt")}
+              text={getTranslatedText("experienceInfo.giftText")}
+              title={getTranslatedText("experienceInfo.giftTitle")}
+            />
+
+            <ExperienceInfo
+              top={22}
+              uppercase="true"
+              src={Image.developer}
+              alt={getTranslatedText("experienceInfo.developerAlt")}
+              text={getTranslatedText("experienceInfo.developerText")}
+              title={getTranslatedText("experienceInfo.developerTitle")}
+            />
+          </Styles.ExperienceWrapper>
+        </Responsive.Mobile>
       </Styles.Offer>
 
-      <SignUp />
+      <Responsive.NotMobile>
+        <SignUp />
+      </Responsive.NotMobile>
 
-      <Styles.FrontEndDeveloper src={Image.frontend} />
-      <Styles.Html src={Image.html} />
-      <Styles.Css src={Image.css} />
-      <Styles.Js src={Image.js} />
-      <Styles.SublimeText src={Image.sublime} />
-      <Styles.VsCode src={Image.vscode} />
+      <Responsive.Desktop>
+        <Styles.FrontEndDeveloper src={Image.frontend} />
+        <Styles.Html src={Image.html} />
+        <Styles.Css src={Image.css} />
+        <Styles.Js src={Image.js} />
+        <Styles.SublimeText src={Image.sublime} />
+        <Styles.VsCode src={Image.vscode} />
+      </Responsive.Desktop>
     </Styles.Section>
   );
 };

@@ -6,7 +6,7 @@ import * as Styles from "./styles";
 const Logo = () => {
   return (
     <Styles.LogoWrapper>
-      <Styles.HiddenH1>Powercode Academy</Styles.HiddenH1>
+      <Styles.HiddenH1>{getTranslatedText("logo.title")}</Styles.HiddenH1>
 
       <Image.Logo alt={getTranslatedText("logo.alt")} />
     </Styles.LogoWrapper>

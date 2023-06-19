@@ -4,6 +4,7 @@ const ru = {
     time: "3,5 часа",
   },
   logo: {
+    title: "Powercode Academy",
     alt: "Логотип",
   },
   presentSection: {
@@ -16,6 +17,7 @@ const ru = {
     howToStartCareer: "и как начать карьеру в востребованной профессии",
     withSalary: "с зарплатой",
     potentialSalary: "от 1000$",
+    withPotentialSalary: "с зарплатой от 1000$",
   },
   experienceInfo: {
     developerTitle: "Кирилл Касатанов",

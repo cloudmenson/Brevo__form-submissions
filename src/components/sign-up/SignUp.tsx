@@ -4,13 +4,12 @@ import { Input, Button } from "components";
 import { sendEmail } from "service/emailService";
 import { validationSchema } from "components/sign-up/config";
 import { getTranslatedText } from "components/local/getTranslatedText";
-import { ISignUp } from "./types";
 
+import { ISignUp } from "./types";
 import * as Styles from "./styles";
 import "react-phone-number-input/style.css";
 
-const SignUp = () => {
-  const handleSubmit = async (values: ISignUp) => {
+const SignUp = () => {  const handleSubmit = async (values: ISignUp) => {
     try {
       await sendEmail(values);
       alert(getTranslatedText("signUp.successAlert"));
@@ -34,7 +33,7 @@ const SignUp = () => {
     <Styles.Wrapper>
       <Styles.TitleH2>
         {getTranslatedText("signUp.signUpTitle")}&nbsp;
-        <Styles.ColorSpan>{getTranslatedText("signUp.free")}</Styles.ColorSpan>
+        <Styles.ColorSpan>{getTranslatedText("signUp.free")}</Styles.ColorSpan>&nbsp;
         {getTranslatedText("signUp.gift")}
       </Styles.TitleH2>
 
@@ -79,6 +78,7 @@ const SignUp = () => {
 
         <Styles.PrivacyPolicy>
           {getTranslatedText("signUp.agreeWithConditions")}
+
           <Styles.PrivacyLink target="_blank" href="#">
             {getTranslatedText("signUp.privacyPolicy")}
           </Styles.PrivacyLink>
