@@ -1,4 +1,4 @@
-`!!! To send the form, the .env file that contains the secret API key must be placed in the src folder.
+`!!! To send the form, the .env file that contains the secret API key must be in the root of the project folder.
 This file is private.`
 
 ## Setup
