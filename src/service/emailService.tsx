@@ -4,11 +4,11 @@ import { ISendEmail } from "./types";
 
 const sendEmail = async ({ name, email, phoneNumber }: ISendEmail) => {
   try {
-    const response = await axios.post(
+    await axios.post(
       "https://api.sendinblue.com/v3/smtp/email",
       {
         sender: { name: `${name}`, email: "hrytsenko.danylo@gmail.com" },
-        to: [{ email: "designer.web.studio.rgb@gmail.com" }],
+        to: [{ email: "hrytsenko.danylo@gmail.com" }],
         subject: "New Contact Form Submission",
         textContent: ` Email: ${email}\nPhone Number: ${phoneNumber}`,
       },
