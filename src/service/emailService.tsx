@@ -8,7 +8,7 @@ const sendEmail = async ({ name, email, phoneNumber }: ISendEmail) => {
       "https://api.sendinblue.com/v3/smtp/email",
       {
         sender: { name: `${name}`, email: "hrytsenko.danylo@gmail.com" },
-        to: [{ email: "hrytsenko.danylo@gmail.com" }],
+        to: [{ email: "designer.web.studio.rgb@gmail.com" }],
         subject: "New Contact Form Submission",
         textContent: ` Email: ${email}\nPhone Number: ${phoneNumber}`,
       },
