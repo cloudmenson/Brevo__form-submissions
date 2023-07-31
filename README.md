@@ -5,7 +5,8 @@
 - Styled-components
 - Axios
 - Formik 
-- Prettier 
+- Prettier
+- Brevo
 
 # Getting Started
 
