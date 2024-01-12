@@ -1,12 +1,12 @@
 `Technologies used:`
 - React
 - TypeScript
+- Brevo
 - React responsive
 - Styled-components
 - Axios
 - Formik 
 - Prettier
-- Brevo
 
 # Getting Started
 
